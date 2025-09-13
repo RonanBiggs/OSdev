@@ -22,7 +22,7 @@ else
 endif
 
 # User controllable linker command.
-LD := $(TOOLCHAIN_PREFIX)ld
+LD := $(TOOLCHAIN_PREFIX)ld 
 
 # Defaults overrides for variables if using "llvm" as toolchain.
 ifeq ($(TOOLCHAIN),llvm)
@@ -40,7 +40,7 @@ CPPFLAGS :=
 NASMFLAGS := -g
 
 # User controllable linker flags. We set none by default.
-LDFLAGS :=
+LDFLAGS := -Map=kernel.map
 
 # Check if CC is Clang.
 override CC_IS_CLANG := $(shell ! $(CC) --version 2>/dev/null | grep -q '^Target: '; echo $$?)

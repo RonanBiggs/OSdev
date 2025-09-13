@@ -1,0 +1,356 @@
+
+Merging program properties
+
+Updated property 0xc0010002 (0x1) to merge obj/src/font.c.o (0x0) and obj/src/functions.c.o (0x1)
+Removed property 0xc0000002 to merge obj/src/font.c.o (0x3) and obj/src/isr.asm.o (not found)
+Removed property 0xc0010001 to merge obj/src/font.c.o (0x1) and obj/src/isr.asm.o (not found)
+Removed property 0xc0010002 to merge obj/src/font.c.o (0x1) and obj/src/isr.asm.o (not found)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 obj/src/font.c.o
+ .data          0x0000000000000000        0x0 obj/src/font.c.o
+ .bss           0x0000000000000000        0x0 obj/src/font.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 obj/src/font.c.o
+ .note.gnu.property
+                0x0000000000000000       0x50 obj/src/font.c.o
+ .text          0x0000000000000000        0x0 obj/src/functions.c.o
+ .data          0x0000000000000000        0x0 obj/src/functions.c.o
+ .bss           0x0000000000000000        0x0 obj/src/functions.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 obj/src/functions.c.o
+ .note.gnu.property
+                0x0000000000000000       0x50 obj/src/functions.c.o
+ .eh_frame      0x0000000000000000       0xb0 obj/src/functions.c.o
+ .text          0x0000000000000000        0x0 obj/src/gdt.c.o
+ .data          0x0000000000000000        0x0 obj/src/gdt.c.o
+ .bss           0x0000000000000000        0x0 obj/src/gdt.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 obj/src/gdt.c.o
+ .note.gnu.property
+                0x0000000000000000       0x50 obj/src/gdt.c.o
+ .eh_frame      0x0000000000000000       0x30 obj/src/gdt.c.o
+ .text          0x0000000000000000        0x0 obj/src/idt.c.o
+ .data          0x0000000000000000        0x0 obj/src/idt.c.o
+ .bss           0x0000000000000000        0x0 obj/src/idt.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 obj/src/idt.c.o
+ .note.gnu.property
+                0x0000000000000000       0x50 obj/src/idt.c.o
+ .eh_frame      0x0000000000000000       0x30 obj/src/idt.c.o
+ .text          0x0000000000000000        0x0 obj/src/isr.c.o
+ .data          0x0000000000000000        0x0 obj/src/isr.c.o
+ .bss           0x0000000000000000        0x0 obj/src/isr.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 obj/src/isr.c.o
+ .note.gnu.property
+                0x0000000000000000       0x50 obj/src/isr.c.o
+ .eh_frame      0x0000000000000000       0x38 obj/src/isr.c.o
+ .text          0x0000000000000000        0x0 obj/src/main.c.o
+ .data          0x0000000000000000        0x0 obj/src/main.c.o
+ .bss           0x0000000000000000        0x0 obj/src/main.c.o
+ .text.memcpy   0x0000000000000000       0x33 obj/src/main.c.o
+ .text.memset   0x0000000000000000       0x42 obj/src/main.c.o
+ .text.memmove  0x0000000000000000       0x5e obj/src/main.c.o
+ .text.memcmp   0x0000000000000000       0x43 obj/src/main.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 obj/src/main.c.o
+ .note.gnu.property
+                0x0000000000000000       0x50 obj/src/main.c.o
+ .eh_frame      0x0000000000000000       0x88 obj/src/main.c.o
+ .text          0x0000000000000000        0x0 obj/src/pic.c.o
+ .data          0x0000000000000000        0x0 obj/src/pic.c.o
+ .bss           0x0000000000000000        0x0 obj/src/pic.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 obj/src/pic.c.o
+ .note.gnu.property
+                0x0000000000000000       0x50 obj/src/pic.c.o
+ .eh_frame      0x0000000000000000       0x40 obj/src/pic.c.o
+ .text          0x0000000000000000        0x0 obj/src/serial.c.o
+ .data          0x0000000000000000        0x0 obj/src/serial.c.o
+ .bss           0x0000000000000000        0x0 obj/src/serial.c.o
+ .text.serial_init
+                0x0000000000000000       0x58 obj/src/serial.c.o
+ .text.serial_putc
+                0x0000000000000000       0x85 obj/src/serial.c.o
+ .rodata.serial_write_hex64.str1.1
+                0x0000000000000000       0x11 obj/src/serial.c.o
+ .text.serial_write_hex64
+                0x0000000000000000       0x4c obj/src/serial.c.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 obj/src/serial.c.o
+ .note.gnu.property
+                0x0000000000000000       0x50 obj/src/serial.c.o
+ .eh_frame      0x0000000000000000       0x70 obj/src/serial.c.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD obj/src/font.c.o
+LOAD obj/src/functions.c.o
+LOAD obj/src/gdt.c.o
+LOAD obj/src/idt.c.o
+LOAD obj/src/isr.c.o
+LOAD obj/src/main.c.o
+LOAD obj/src/pic.c.o
+LOAD obj/src/serial.c.o
+LOAD obj/src/isr.asm.o
+                0xffffffff80000000                . = 0xffffffff80000000
+
+.limine_requests
+                0xffffffff80000000       0x80
+ *(.limine_requests_start)
+ .limine_requests_start
+                0xffffffff80000000       0x20 obj/src/main.c.o
+ *(.limine_requests)
+ .limine_requests
+                0xffffffff80000020       0x48 obj/src/main.c.o
+ *(.limine_requests_end)
+ *fill*         0xffffffff80000068        0x8 
+ .limine_requests_end
+                0xffffffff80000070       0x10 obj/src/main.c.o
+                0xffffffff80001000                . = ALIGN (CONSTANT (MAXPAGESIZE))
+
+.text           0xffffffff80001000      0x628
+ *(.text .text.*)
+ .text.put_pixel
+                0xffffffff80001000       0x29 obj/src/functions.c.o
+                0xffffffff80001000                put_pixel
+ *fill*         0xffffffff80001029       0x17 
+ .text.write_char
+                0xffffffff80001040       0x93 obj/src/functions.c.o
+                0xffffffff80001040                write_char
+ *fill*         0xffffffff800010d3        0xd 
+ .text.write_string
+                0xffffffff800010e0       0x9e obj/src/functions.c.o
+                0xffffffff800010e0                write_string
+ *fill*         0xffffffff8000117e        0x2 
+ .text.gdt_init
+                0xffffffff80001180       0x6a obj/src/gdt.c.o
+                0xffffffff80001180                gdt_init
+ *fill*         0xffffffff800011ea       0x16 
+ .text.idt_init
+                0xffffffff80001200       0xa4 obj/src/idt.c.o
+                0xffffffff80001200                idt_init
+ *fill*         0xffffffff800012a4        0xc 
+ .text.isr_handler
+                0xffffffff800012b0       0x23 obj/src/isr.c.o
+                0xffffffff800012b0                isr_handler
+ *fill*         0xffffffff800012d3        0xd 
+ .text.kmain    0xffffffff800012e0      0x133 obj/src/main.c.o
+                0xffffffff800012e0                kmain
+ *fill*         0xffffffff80001413        0xd 
+ .text.pic_remap
+                0xffffffff80001420       0x3c obj/src/pic.c.o
+                0xffffffff80001420                pic_remap
+ *fill*         0xffffffff8000145c        0x4 
+ .text.enable_irq
+                0xffffffff80001460       0x27 obj/src/pic.c.o
+                0xffffffff80001460                enable_irq
+ *fill*         0xffffffff80001487        0x9 
+ .text.serial_write
+                0xffffffff80001490      0x14b obj/src/serial.c.o
+                0xffffffff80001490                serial_write
+ *fill*         0xffffffff800015db        0x5 
+ .text          0xffffffff800015e0       0x48 obj/src/isr.asm.o
+                0xffffffff8000161c                isr0
+                0xffffffff80001622                isr1
+
+.iplt           0xffffffff80001628        0x0
+ .iplt          0xffffffff80001628        0x0 obj/src/font.c.o
+                0xffffffff80002000                . = ALIGN (CONSTANT (MAXPAGESIZE))
+
+.rodata         0xffffffff80002000      0x41a
+ *(.rodata .rodata.*)
+ .rodata.font   0xffffffff80002000      0x3f8 obj/src/font.c.o
+                0xffffffff80002000                font
+ .rodata.cst2   0xffffffff800023f8        0x2 obj/src/idt.c.o
+ .rodata.isr_handler.str1.1
+                0xffffffff800023fa       0x20 obj/src/isr.c.o
+                                          0x8 (size before relaxing)
+ .rodata.kmain.str1.1
+                0xffffffff8000241a       0x18 obj/src/main.c.o
+
+.rela.dyn       0xffffffff80002420        0x0
+ .rela.got      0xffffffff80002420        0x0 obj/src/font.c.o
+ .rela.iplt     0xffffffff80002420        0x0 obj/src/font.c.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+                0xffffffff80003000                . = ALIGN (CONSTANT (MAXPAGESIZE))
+
+.data
+ *(.data .data.*)
+
+.got            0xffffffff80003000        0x0
+ .got           0xffffffff80003000        0x0 obj/src/font.c.o
+
+.got.plt        0xffffffff80003000        0x0
+ .got.plt       0xffffffff80003000        0x0 obj/src/font.c.o
+
+.igot.plt       0xffffffff80003000        0x0
+ .igot.plt      0xffffffff80003000        0x0 obj/src/font.c.o
+
+.bss            0xffffffff80003000     0x1044
+ *(.bss .bss.*)
+ .bss.gdtr      0xffffffff80003000        0xa obj/src/gdt.c.o
+                0xffffffff80003000                gdtr
+ *fill*         0xffffffff8000300a        0x6 
+ .bss.gdt       0xffffffff80003010       0x18 obj/src/gdt.c.o
+                0xffffffff80003010                gdt
+ .bss.idt_ptr   0xffffffff80003028        0xa obj/src/idt.c.o
+                0xffffffff80003028                idt_ptr
+ *fill*         0xffffffff80003032        0xe 
+ .bss.idt       0xffffffff80003040     0x1000 obj/src/idt.c.o
+                0xffffffff80003040                idt
+ .bss.serial_initialized
+                0xffffffff80004040        0x4 obj/src/serial.c.o
+ *(COMMON)
+
+/DISCARD/
+ *(.eh_frame*)
+ *(.note .note.*)
+OUTPUT(bin/myos elf64-x86-64)
+
+.debug_info     0x0000000000000000     0x22f5
+ .debug_info    0x0000000000000000       0xa1 obj/src/font.c.o
+ .debug_info    0x00000000000000a1      0x585 obj/src/functions.c.o
+ .debug_info    0x0000000000000626      0x173 obj/src/gdt.c.o
+ .debug_info    0x0000000000000799      0x1a1 obj/src/idt.c.o
+ .debug_info    0x000000000000093a      0x107 obj/src/isr.c.o
+ .debug_info    0x0000000000000a41      0x8ac obj/src/main.c.o
+ .debug_info    0x00000000000012ed      0x46b obj/src/pic.c.o
+ .debug_info    0x0000000000001758      0xb23 obj/src/serial.c.o
+ .debug_info    0x000000000000227b       0x7a obj/src/isr.asm.o
+
+.debug_abbrev   0x0000000000000000      0xa91
+ .debug_abbrev  0x0000000000000000       0x70 obj/src/font.c.o
+ .debug_abbrev  0x0000000000000070      0x1e9 obj/src/functions.c.o
+ .debug_abbrev  0x0000000000000259       0xcc obj/src/gdt.c.o
+ .debug_abbrev  0x0000000000000325      0x106 obj/src/idt.c.o
+ .debug_abbrev  0x000000000000042b       0xbb obj/src/isr.c.o
+ .debug_abbrev  0x00000000000004e6      0x239 obj/src/main.c.o
+ .debug_abbrev  0x000000000000071f      0x136 obj/src/pic.c.o
+ .debug_abbrev  0x0000000000000855      0x21f obj/src/serial.c.o
+ .debug_abbrev  0x0000000000000a74       0x1d obj/src/isr.asm.o
+
+.debug_aranges  0x0000000000000000      0x240
+ .debug_aranges
+                0x0000000000000000       0x20 obj/src/font.c.o
+ .debug_aranges
+                0x0000000000000020       0x50 obj/src/functions.c.o
+ .debug_aranges
+                0x0000000000000070       0x30 obj/src/gdt.c.o
+ .debug_aranges
+                0x00000000000000a0       0x30 obj/src/idt.c.o
+ .debug_aranges
+                0x00000000000000d0       0x30 obj/src/isr.c.o
+ .debug_aranges
+                0x0000000000000100       0x70 obj/src/main.c.o
+ .debug_aranges
+                0x0000000000000170       0x40 obj/src/pic.c.o
+ .debug_aranges
+                0x00000000000001b0       0x60 obj/src/serial.c.o
+ .debug_aranges
+                0x0000000000000210       0x30 obj/src/isr.asm.o
+
+.debug_line     0x0000000000000000      0xdd9
+ .debug_line    0x0000000000000000       0x48 obj/src/font.c.o
+ .debug_line    0x0000000000000048      0x24d obj/src/functions.c.o
+ .debug_line    0x0000000000000295       0x98 obj/src/gdt.c.o
+ .debug_line    0x000000000000032d       0xec obj/src/idt.c.o
+ .debug_line    0x0000000000000419       0x7d obj/src/isr.c.o
+ .debug_line    0x0000000000000496      0x359 obj/src/main.c.o
+ .debug_line    0x00000000000007ef      0x17b obj/src/pic.c.o
+ .debug_line    0x000000000000096a      0x409 obj/src/serial.c.o
+ .debug_line    0x0000000000000d73       0x66 obj/src/isr.asm.o
+
+.debug_str      0x0000000000000000      0x545
+ .debug_str     0x0000000000000000      0x545 obj/src/font.c.o
+                                        0x1b9 (size before relaxing)
+ .debug_str     0x0000000000000545      0x318 obj/src/functions.c.o
+ .debug_str     0x0000000000000545      0x244 obj/src/gdt.c.o
+ .debug_str     0x0000000000000545      0x248 obj/src/idt.c.o
+ .debug_str     0x0000000000000545      0x1f9 obj/src/isr.c.o
+ .debug_str     0x0000000000000545      0x426 obj/src/main.c.o
+ .debug_str     0x0000000000000545      0x1e4 obj/src/pic.c.o
+ .debug_str     0x0000000000000545      0x21f obj/src/serial.c.o
+
+.debug_line_str
+                0x0000000000000000      0x100
+ .debug_line_str
+                0x0000000000000000      0x100 obj/src/font.c.o
+                                         0xad (size before relaxing)
+ .debug_line_str
+                0x0000000000000100       0xc7 obj/src/functions.c.o
+ .debug_line_str
+                0x0000000000000100       0xa9 obj/src/gdt.c.o
+ .debug_line_str
+                0x0000000000000100       0xa9 obj/src/idt.c.o
+ .debug_line_str
+                0x0000000000000100       0xac obj/src/isr.c.o
+ .debug_line_str
+                0x0000000000000100       0xe6 obj/src/main.c.o
+ .debug_line_str
+                0x0000000000000100       0xa3 obj/src/pic.c.o
+ .debug_line_str
+                0x0000000000000100       0xac obj/src/serial.c.o
+
+.comment        0x0000000000000000       0x1f
+ .comment       0x0000000000000000       0x1f obj/src/font.c.o
+                                         0x20 (size before relaxing)
+ .comment       0x000000000000001f       0x20 obj/src/functions.c.o
+ .comment       0x000000000000001f       0x20 obj/src/gdt.c.o
+ .comment       0x000000000000001f       0x20 obj/src/idt.c.o
+ .comment       0x000000000000001f       0x20 obj/src/isr.c.o
+ .comment       0x000000000000001f       0x20 obj/src/main.c.o
+ .comment       0x000000000000001f       0x20 obj/src/pic.c.o
+ .comment       0x000000000000001f       0x20 obj/src/serial.c.o
+
+.debug_loclists
+                0x0000000000000000      0xd59
+ .debug_loclists
+                0x0000000000000000      0x333 obj/src/functions.c.o
+ .debug_loclists
+                0x0000000000000333       0x48 obj/src/idt.c.o
+ .debug_loclists
+                0x000000000000037b       0x45 obj/src/isr.c.o
+ .debug_loclists
+                0x00000000000003c0      0x25e obj/src/main.c.o
+ .debug_loclists
+                0x000000000000061e      0x214 obj/src/pic.c.o
+ .debug_loclists
+                0x0000000000000832      0x527 obj/src/serial.c.o
+
+.debug_rnglists
+                0x0000000000000000      0x21c
+ .debug_rnglists
+                0x0000000000000000       0x90 obj/src/functions.c.o
+ .debug_rnglists
+                0x0000000000000090       0x17 obj/src/gdt.c.o
+ .debug_rnglists
+                0x00000000000000a7       0x18 obj/src/idt.c.o
+ .debug_rnglists
+                0x00000000000000bf       0x17 obj/src/isr.c.o
+ .debug_rnglists
+                0x00000000000000d6       0x50 obj/src/main.c.o
+ .debug_rnglists
+                0x0000000000000126       0x41 obj/src/pic.c.o
+ .debug_rnglists
+                0x0000000000000167       0xb5 obj/src/serial.c.o
+
+.debug_pubnames
+                0x0000000000000000        0x0
+ .debug_pubnames
+                0x0000000000000000        0x0 obj/src/isr.asm.o
+
+.debug_frame    0x0000000000000000        0x0
+ .debug_frame   0x0000000000000000        0x0 obj/src/isr.asm.o
+
+.debug_loc      0x0000000000000000        0x0
+ .debug_loc     0x0000000000000000        0x0 obj/src/isr.asm.o

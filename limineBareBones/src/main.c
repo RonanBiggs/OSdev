@@ -2,8 +2,12 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <limine.h>
+#include "idt.h"
+#include "gdt.h"
+#include "pic.h"
 #include "font.h" 
 #include "functions.h"
+#include "serial.h"
 
 // Set the base revision to 3, this is recommended as this is the latest
 // base revision described by the Limine boot protocol specification.
@@ -104,6 +108,15 @@ static void hcf(void) {
 
 
 void kmain(void) {
+    //TODO initialize gdt and update idt
+   //interrupt descriptor table 
+  asm volatile("cli\n");//clear interrupt flag so code isnt interrupted, TODO set this again when needed 
+  gdt_init();
+  idt_init();
+  pic_remap();
+  enable_irq(0x01);
+/////////////////draw to screen
+////////////////
 
     // Ensure the bootloader actually understands our base revision (see spec).
     if (LIMINE_BASE_REVISION_SUPPORTED == false) {
@@ -115,7 +128,6 @@ void kmain(void) {
      || framebuffer_request.response->framebuffer_count < 1) {
         hcf();
     }
-
     // Fetch the first framebuffer.
     struct limine_framebuffer *fb = framebuffer_request.response->framebuffers[0];
 
@@ -124,6 +136,8 @@ void kmain(void) {
     for (size_t i = 0; i < 100; i++) {
         fb_ptr[i * (fb->pitch / 4) + i] = 0xffffff;
     }
+
+
   //clear screen to black
   for(size_t y = 0; y < fb->height; y++){
     for(size_t x = 0; x < fb->width; x++){
@@ -131,14 +145,19 @@ void kmain(void) {
     }
   }
   const char *string = "hello\nworld";
-  size_t x = 0;
   size_t y = 10;
   uint32_t white = 0x00FFFFFF; // White
 //TODO: newline, 
- 
-  write_string(string, font, white, fb, 0, y);
    
 
+
+//////////test idt
+/////////
+  write_string(string, font, white, fb, 0, y);
+  uint64_t z = 0;
+  //asm volatile("div %0"::"r"(z):"rax","rdx");
+  asm volatile("xor %%rdx, %%rdx;\n" "mov $5, %%rax;\n" "div %0\n" :: "r"(z) : "rax", "rdx");
+  serial_write("after test\n");
     //write_string(0x07, "hello world");
     // We're done, just hang...
     hcf();
